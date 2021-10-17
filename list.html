@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=640, initial-scale=0.47, maximum-scale=1.0, user-scalable=1" name="viewport">
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/Bootstrap/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="assets/Bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="assets/Bootstrap/css/bootstrap-reboot.css">
+    <link rel="stylesheet" href="assets/Bootstrap/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="assets/Bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/Bootstrap/css/bootstrap.min.css">
+
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" crossorigin="anonymous">
+
+    <title>List Page</title>
+</head>
+<body>
+    <div class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-2" style="width:16.666667%">
+                        <div class="logo">
+                            <a href="#">
+                                <img src="assets/img/logo.png" alt="logo">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6" style="width:50%">
+                        <div class="search-box">
+                            <input type="text" placeholder="Search for anything...">
+                            <a href="#">
+                                <i class="fas fa-search"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-2" style="width:16.666667%"></div>
+                    <div class="col-md-2" style="width:16.666667%">
+                        <div class="head-icon">
+                            <a href="#">
+                                <i class="far fa-user"></i>
+                            </a>
+                            <a href="#" style="margin-left: 34px;">
+                                <i class="fas fa-shopping-cart"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    
+    <div class="main">
+        <div class="breadcramb">
+            <div class="bread-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <span>
+                                <a href="#">
+                                    Home
+                                </a>
+                            </span>
+                            <span>
+                                <i class="fas fa-chevron-right"></i>
+                            </span>
+                            <span class="current-page">
+                                <a href="#">
+                                    Products
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="sortby">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-3"></div>
+                    <div class="col-sm-12 col-md-9">
+                        <div class="sort-by">
+                            <img class="sort" src="assets/img/sort.png" alt="sort">
+                            <span style="margin: 0px 7px;">Sort By: </span>
+                            <span class="money">
+                                <a href="#">
+                                    <img src="assets/img/money.png" alt="money">
+                                </a>
+                            </span>
+                            <span class="money">
+                                <a href="#">
+                                    <img src="assets/img/eye.png" alt="money">
+                                </a>
+                            </span>
+                            <span class="money money-active">
+                                <a href="#">
+                                    <img src="assets/img/star.png" alt="money">
+                                </a>
+                            </span>
+                            <span class="money">
+                                <a href="#">
+                                    <img src="assets/img/clock.png" alt="money">
+                                </a>
+                            </span>
+                        </div>                    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="list-page-content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 col-md-3">
+                        <div class="category">
+                            <h3>
+                                Categories
+                            </h3>
+                            <div class="category-list">
+                                <div class="cat-ul">
+                                    <h3>
+                                        All
+                                    </h3>
+                                    <ul>
+                                        <li><a href="#">
+                                            Collectibles
+                                        </a></li>
+                                        <li><a href="#">
+                                            Book
+                                        </a></li>
+                                        <li><a href="#">
+                                            Sporting Goods
+                                        </a></li>
+                                        <li><a href="#">
+                                            Home & Garden
+                                        </a></li>
+                                        <li><a href="#">
+                                            Crafts
+                                        </a></li>
+                                        <li><a href="#">
+                                            Health & Beauty
+                                        </a></li>
+                                        <li><a href="#" id="showmore" onclick="readmore()">
+                                            <span class="showmore">Show More</span>
+                                            <i class="fas fa-sort-down"></i>
+                                        </a></li>
+                                        <div class="show-more display-none">
+                                                <li><a href="#">
+                                                        Sporting Goods
+                                                    </a></li>
+                                                    <li><a href="#">
+                                                        Home & Garden
+                                                    </a></li>
+                                                    <li><a href="#">
+                                                        Crafts
+                                                    </a></li>
+                                                    <li><a href="#">
+                                                        Health & Beauty
+                                                    </a></li>
+                                        </div>
+                                    </ul>
+                                </div>
+                                <br>
+                                <div class="price-ul">
+                                    <h3 style="margin-bottom: 0px;">Price</h3>
+                                <ul style="padding-left: 0;">
+                                    <li></li>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                            <label class="custom-control-label" for="customCheck1">Under DDK 230.00</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck2">
+                                            <label class="custom-control-label" for="customCheck2">Under DDK 230.00 to DDK 500.00</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck3">
+                                            <label class="custom-control-label" for="customCheck3">Over DDK 50.00</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck4">
+                                            <label class="custom-control-label" for="customCheck4">New</label>
+                                        </div>
+                                        <div class="custom-control custom-checkbox">
+                                            <input type="checkbox" class="custom-control-input" id="customCheck5">
+                                            <label class="custom-control-label" for="customCheck5">Used</label>
+                                        </div>
+                                    </li>
+                                </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-9">
+                        <div class="products-list">
+                            <div class="product-item">
+                                <div class="col-md-3">
+                                    <div class="product-img">
+                                        <img src="assets/img/laptop.png" alt="laptop">
+                                    </div>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="product-detail">
+                                        <div class="col-md-12">
+                                            <h2>
+                                                GIGABYTE AERO 15X - 15.6” FHD 144hz Notebook - (Black) (Intel Core i7-8750H, 16 GB RAM, 512 GB SSD, 8 GB NVIDIA GeForce GTX 1070 Graphics, Windows 10)
+                                            </h2>
+                                        </div>
+                                        <div class="rating row">
+                                            <div class="col-md-4 col-sm-12">
+                                                <div class="price">
+                                                    <span>by Gigabyte</span>
+                                                    <br>
+                                                    <br>
+                                                    <span>$1,799.00 - $3,999.11</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4"></div>
+                                            <div class="col-md-4 col-sm-12">
+                                                <div class="rate">
+                                                    <form>
+                                                        <fieldset class="starability-slot">
+                                                            <legend>Basic Rating</legend>
+                                                            <input type="radio" id="no-rate-slot" class="input-no-rate" name="rating" value="0" checked="" aria-label="No rating.">
+                                                          
+                                                            <input type="radio" id="slot-rate1" name="rating" value="1">
+                                                            <label for="slot-rate1" title="Terrible">1 star</label>
+                                                          
+                                                            <input type="radio" id="slot-rate2" name="rating" value="2">
+                                                            <label for="slot-rate2" title="Not good">2 stars</label>
+                                                          
+                                                            <input type="radio" id="slot-rate3" name="rating" value="3">
+                                                            <label for="slot-rate3" title="Average">3 stars</label>
+                                                          
+                                                            <input type="radio" id="slot-rate4" name="rating" value="4">
+                                                            <label for="slot-rate4" title="Very good">4 stars</label>
+                                                          
+                                                            <input type="radio" id="slot-rate5" name="rating" value="5">
+                                                            <label for="slot-rate5" title="Amazing">5 stars</label>
+                                                          
+                                                            <span class="starability-focus-ring"></span>
+                                                        </fieldset>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="col-md-3">
+                                    <div class="product-img">
+                                        <img src="assets/img/laptop.png" alt="laptop">
+                                    </div>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="product-detail">
+                                        <div class="col-md-12">
+                                            <h2>
+                                                GIGABYTE AERO 15X - 15.6” FHD 144hz Notebook - (Black) (Intel Core i7-8750H, 16 GB RAM, 512 GB SSD, 8 GB NVIDIA GeForce GTX 1070 Graphics, Windows 10)
+                                            </h2>
+                                        </div>
+                                        <div class="rating row">
+                                            <div class="col-md-4 col-sm-12">
+                                                <div class="price">
+                                                    <span>by Gigabyte</span>
+                                                    <br>
+                                                    <br>
+                                                    <span>$1,799.00 - $3,999.11</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4"></div>
+                                            <div class="col-md-4 col-sm-12">
+                                                <div class="rate">
+                                                    <form>
+                                                        <fieldset class="starability-slot">
+                                                            <legend>Basic Rating</legend>
+                                                            <input type="radio" id="no-rate-slot" class="input-no-rate" name="rating" value="0" checked="" aria-label="No rating.">
+                                                          
+                                                            <input type="radio" id="slot-rate1" name="rating" value="1">
+                                                            <label for="slot-rate1" title="Terrible">1 star</label>
+                                                          
+                                                            <input type="radio" id="slot-rate2" name="rating" value="2">
+                                                            <label for="slot-rate2" title="Not good">2 stars</label>
+                                                          
+                                                            <input type="radio" id="slot-rate3" name="rating" value="3">
+                                                            <label for="slot-rate3" title="Average">3 stars</label>
+                                                          
+                                                            <input type="radio" id="slot-rate4" name="rating" value="4">
+                                                            <label for="slot-rate4" title="Very good">4 stars</label>
+                                                          
+                                                            <input type="radio" id="slot-rate5" name="rating" value="5">
+                                                            <label for="slot-rate5" title="Amazing">5 stars</label>
+                                                          
+                                                            <span class="starability-focus-ring"></span>
+                                                        </fieldset>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="col-md-3">
+                                    <div class="product-img">
+                                        <img src="assets/img/laptop.png" alt="laptop">
+                                    </div>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="product-detail">
+                                        <div class="col-md-12">
+                                            <h2>
+                                                GIGABYTE AERO 15X - 15.6” FHD 144hz Notebook - (Black) (Intel Core i7-8750H, 16 GB RAM, 512 GB SSD, 8 GB NVIDIA GeForce GTX 1070 Graphics, Windows 10)
+                                            </h2>
+                                        </div>
+                                        <div class="rating row">
+                                            <div class="col-md-4 col-sm-12">
+                                                <div class="price">
+                                                    <span>by Gigabyte</span>
+                                                    <br>
+                                                    <br>
+                                                    <span>$1,799.00 - $3,999.11</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4"></div>
+                                            <div class="col-md-4 col-sm-12">
+                                                <div class="rate">
+                                                    <form>
+                                                        <fieldset class="starability-slot">
+                                                            <legend>Basic Rating</legend>
+                                                            <input type="radio" id="no-rate-slot" class="input-no-rate" name="rating" value="0" checked="" aria-label="No rating.">
+                                                          
+                                                            <input type="radio" id="slot-rate1" name="rating" value="1">
+                                                            <label for="slot-rate1" title="Terrible">1 star</label>
+                                                          
+                                                            <input type="radio" id="slot-rate2" name="rating" value="2">
+                                                            <label for="slot-rate2" title="Not good">2 stars</label>
+                                                          
+                                                            <input type="radio" id="slot-rate3" name="rating" value="3">
+                                                            <label for="slot-rate3" title="Average">3 stars</label>
+                                                          
+                                                            <input type="radio" id="slot-rate4" name="rating" value="4">
+                                                            <label for="slot-rate4" title="Very good">4 stars</label>
+                                                          
+                                                            <input type="radio" id="slot-rate5" name="rating" value="5">
+                                                            <label for="slot-rate5" title="Amazing">5 stars</label>
+                                                          
+                                                            <span class="starability-focus-ring"></span>
+                                                        </fieldset>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-item">
+                                <div class="col-md-3">
+                                    <div class="product-img">
+                                        <img src="assets/img/laptop.png" alt="laptop">
+                                    </div>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="product-detail">
+                                        <div class="col-md-12">
+                                            <h2>
+                                                GIGABYTE AERO 15X - 15.6” FHD 144hz Notebook - (Black) (Intel Core i7-8750H, 16 GB RAM, 512 GB SSD, 8 GB NVIDIA GeForce GTX 1070 Graphics, Windows 10)
+                                            </h2>
+                                        </div>
+                                        <div class="rating row">
+                                            <div class="col-md-4 col-sm-12">
+                                                <div class="price">
+                                                    <span>by Gigabyte</span>
+                                                    <br>
+                                                    <br>
+                                                    <span>$1,799.00 - $3,999.11</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4"></div>
+                                            <div class="col-md-4 col-sm-12">
+                                                <div class="rate">
+                                                    <form>
+                                                        <fieldset class="starability-slot">
+                                                            <legend>Basic Rating</legend>
+                                                            <input type="radio" id="no-rate-slot" class="input-no-rate" name="rating" value="0" checked="" aria-label="No rating.">
+                                                          
+                                                            <input type="radio" id="slot-rate1" name="rating" value="1">
+                                                            <label for="slot-rate1" title="Terrible">1 star</label>
+                                                          
+                                                            <input type="radio" id="slot-rate2" name="rating" value="2">
+                                                            <label for="slot-rate2" title="Not good">2 stars</label>
+                                                          
+                                                            <input type="radio" id="slot-rate3" name="rating" value="3">
+                                                            <label for="slot-rate3" title="Average">3 stars</label>
+                                                          
+                                                            <input type="radio" id="slot-rate4" name="rating" value="4">
+                                                            <label for="slot-rate4" title="Very good">4 stars</label>
+                                                          
+                                                            <input type="radio" id="slot-rate5" name="rating" value="5">
+                                                            <label for="slot-rate5" title="Amazing">5 stars</label>
+                                                          
+                                                            <span class="starability-focus-ring"></span>
+                                                        </fieldset>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pagenavi">
+                            <div class="row">
+                                <a href="#">
+                                    <div class="first-p">
+                                            <span>01</span>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="prev-page">
+                                        <span>PREV</span>
+                                </div>
+                                </a>
+                                <a href="#">
+                                    <div class="currunt-p">
+                                            <span>04</span>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="next-page">
+                                            <span>NEXT</span>
+                                    </div>
+                                </a>
+                                <a href="#">
+                                    <div class="end-p">
+                                            <span>12</span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="title-slider">
+                    <h3>
+                        Top View
+                    </h3>
+                    <h2>
+                        BEST SALES
+                    </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel"  data-interval="1000">
+                    <div class="MultiCarousel-inner">
+                            <div class="item">
+                                    <img src="assets/img/laptop.png" alt="LAPTOP">
+                                    <div class="pad15">
+                                            <p class="lead2">
+                                                <a href="#">
+                                                        GIGABYTE AERO
+                                                </a>
+                                            </p>
+                                            <p class="price2">1799.00 $</p>
+                                        </div>
+                            </div>
+                            <div class="item">
+                                    <img src="assets/img/laptop.png" alt="LAPTOP">
+                                    <div class="pad15">
+                                            <p class="lead2">
+                                                <a href="#">
+                                                        GIGABYTE AERO
+                                                </a>
+                                            </p>
+                                            <p class="price2">1799.00 $</p>
+                                        </div>
+                            </div>
+                            <div class="item">
+                                    <img src="assets/img/laptop.png" alt="LAPTOP">
+                                    <div class="pad15">
+                                            <p class="lead2">
+                                                <a href="#">
+                                                        GIGABYTE AERO
+                                                </a>
+                                            </p>
+                                            <p class="price2">1799.00 $</p>
+                                        </div>
+                            </div>
+                            <div class="item">
+                                    <img src="assets/img/laptop.png" alt="LAPTOP">
+                                    <div class="pad15">
+                                            <p class="lead2">
+                                                <a href="#">
+                                                        GIGABYTE AERO
+                                                </a>
+                                            </p>
+                                            <p class="price2">1799.00 $</p>
+                                        </div>
+                            </div>
+                            <div class="item">
+                                    <img src="assets/img/laptop.png" alt="LAPTOP">
+                                    <div class="pad15">
+                                            <p class="lead2">
+                                                <a href="#">
+                                                        GIGABYTE AERO
+                                                </a>
+                                            </p>
+                                            <p class="price2">1799.00 $</p>
+                                        </div>
+                            </div>
+                            <div class="item">
+                                    <img src="assets/img/laptop.png" alt="LAPTOP">
+                                    <div class="pad15">
+                                            <p class="lead2">
+                                                <a href="#">
+                                                        GIGABYTE AERO
+                                                </a>
+                                            </p>
+                                            <p class="price2">1799.00 $</p>
+                                        </div>
+                            </div>
+                            <div class="item">
+                                    <img src="assets/img/laptop.png" alt="LAPTOP">
+                                    <div class="pad15">
+                                            <p class="lead2">
+                                                <a href="#">
+                                                        GIGABYTE AERO
+                                                </a>
+                                            </p>
+                                            <p class="price2">1799.00 $</p>
+                                        </div>
+                            </div>
+                            <div class="item">
+                                    <img src="assets/img/laptop.png" alt="LAPTOP">
+                                    <div class="pad15">
+                                            <p class="lead2">
+                                                <a href="#">
+                                                        GIGABYTE AERO
+                                                </a>
+                                            </p>
+                                            <p class="price2">1799.00 $</p>
+                                        </div>
+                            </div>
+                            <div class="item">
+                                    <img src="assets/img/laptop.png" alt="LAPTOP">
+                                    <div class="pad15">
+                                            <p class="lead2">
+                                                <a href="#">
+                                                        GIGABYTE AERO
+                                                </a>
+                                            </p>
+                                            <p class="price2">1799.00 $</p>
+                                        </div>
+                            </div>
+
+                        
+                    </div>
+                    <button class="btn btn-primary leftLst"><</button>
+                    <button class="btn btn-primary rightLst">></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="social-media">
+        <ul>
+            <li>
+                <a href="#">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fab fa-youtube"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fab fa-pinterest-p"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fab fa-snapchat-ghost"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="footer-sec">
+                    <div class="footer-item">
+                        <a href="#">Shop</a>
+                        <a href="#">Printer</a>
+                        <a href="#">Used</a>
+                    </div>
+                </div>
+                <div class="footer-sec">
+                    <div class="footer-item">
+                        <a href="#">Offers</a>
+                        <a href="#">Membership</a>
+                        <a href="#">Gift</a>
+                        <a href="#">Invite</a>
+                    </div>
+                </div>
+                <div class="footer-sec">
+                    <div class="footer-item">
+                        <a href="#">About</a>
+                        <a href="#">Our Factories</a>
+                        <a href="#">Careers</a>
+                    </div>
+                </div>
+                <div class="footer-sec">
+                    <div class="footer-item">
+                        <a href="#">Account</a>
+                        <a href="#">Login</a>
+                        <a href="#">Join</a>
+                        <a href="#">Invite</a>
+                    </div>
+                </div>
+                <div class="footer-sec">
+                    <div class="footer-item">
+                        <a href="#">Help</a>
+                        <a href="#">FAQ</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="copyright">
+                    <p>Copy Right @ 2019</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    
+
+
+
+    <script src="assets/Bootstrap/js/bootstrap.bundle.js"></script>
+    <script src="assets/Bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/Bootstrap/js/bootstrap.js"></script>
+    <script src="assets/Bootstrap/js/bootstrap.min.js"></script>
+
+
+
+
+    <script>
+        $(document).ready(function () {
+    var itemsMainDiv = ('.MultiCarousel');
+    var itemsDiv = ('.MultiCarousel-inner');
+    var itemWidth = "";
+
+    $('.leftLst, .rightLst').click(function () {
+        var condition = $(this).hasClass("leftLst");
+        if (condition)
+            click(0, this);
+        else
+            click(1, this)
+    });
+
+    ResCarouselSize();
+
+
+
+
+    $(window).resize(function () {
+        ResCarouselSize();
+    });
+
+    //this function define the size of the items
+    function ResCarouselSize() {
+        var incno = 0;
+        var dataItems = ("data-items");
+        var itemClass = ('.item');
+        var id = 0;
+        var btnParentSb = '';
+        var itemsSplit = '';
+        var sampwidth = $(itemsMainDiv).width();
+        var bodyWidth = $('body').width();
+        $(itemsDiv).each(function () {
+            id = id + 1;
+            var itemNumbers = $(this).find(itemClass).length;
+            btnParentSb = $(this).parent().attr(dataItems);
+            itemsSplit = btnParentSb.split(',');
+            $(this).parent().attr("id", "MultiCarousel" + id);
+
+
+            if (bodyWidth >= 1200) {
+                incno = itemsSplit[3];
+                itemWidth = 400;
+            }
+            else if (bodyWidth >= 992) {
+                incno = itemsSplit[2];
+                itemWidth = 300;
+            }
+            else if (bodyWidth >= 768) {
+                incno = itemsSplit[1];
+                itemWidth = sampwidth / incno;
+            }
+            else {
+                incno = itemsSplit[0];
+                itemWidth = sampwidth / incno;
+            }
+            $(this).css({ 'transform': 'translateX(0px)', 'width': itemWidth * itemNumbers });
+            $(this).find(itemClass).each(function () {
+                $(this).outerWidth(itemWidth);
+            });
+
+            $(".leftLst").addClass("over");
+            $(".rightLst").removeClass("over");
+
+        });
+    }
+
+
+    //this function used to move the items
+    function ResCarousel(e, el, s) {
+        var leftBtn = ('.leftLst');
+        var rightBtn = ('.rightLst');
+        var translateXval = '';
+        var divStyle = $(el + ' ' + itemsDiv).css('transform');
+        var values = divStyle.match(/-?[\d\.]+/g);
+        var xds = Math.abs(values[4]);
+        if (e == 0) {
+            translateXval = parseInt(xds) - parseInt(itemWidth * s);
+            $(el + ' ' + rightBtn).removeClass("over");
+
+            if (translateXval <= itemWidth / 2) {
+                translateXval = 0;
+                $(el + ' ' + leftBtn).addClass("over");
+            }
+        }
+        else if (e == 1) {
+            var itemsCondition = $(el).find(itemsDiv).width() - $(el).width();
+            translateXval = parseInt(xds) + parseInt(itemWidth * s);
+            $(el + ' ' + leftBtn).removeClass("over");
+
+            if (translateXval >= itemsCondition - itemWidth / 2) {
+                translateXval = itemsCondition;
+                $(el + ' ' + rightBtn).addClass("over");
+            }
+        }
+        $(el + ' ' + itemsDiv).css('transform', 'translateX(' + -translateXval + 'px)');
+    }
+
+    //It is used to get some elements from btn
+    function click(ell, ee) {
+        var Parent = "#" + $(ee).parent().attr("id");
+        var slide = $(Parent).attr("data-slide");
+        ResCarousel(ell, Parent, slide);
+    }
+
+});
+    </script>
+
+
+<script>
+
+    var test = false;
+
+        function readmore() {
+            $('.show-more').slideToggle('normal');
+
+            $('.showmore').toggleClass('display-show');
+
+if (!test){
+    $('.showmore').text('Show Less');
+    $('.fas').addClass('fa-sort-up');
+    test = true
+}
+else{
+    $('.showmore').text('Show More');
+    $('.fas').removeClass('fa-sort-up');
+    test = false
+}
+
+
+            
+
+        }
+
+
+
+    </script>
+
+
+
+</body>
+</html>
